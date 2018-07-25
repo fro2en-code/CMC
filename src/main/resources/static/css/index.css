@@ -1,0 +1,151 @@
+.layui-search-form .layui-form-item .layui-form-label {
+    float: left;
+    display: block;
+    padding: 3px 15px 3px 0px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: right;
+}
+.layui-search-form .layui-input, .layui-select, .layui-textarea {
+    height: 30px;
+    line-height: 1.3;
+    line-height: 38px\9;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    border-radius: 2px;
+}
+.layui-search-form .layui-form-item .layui-inline {
+    margin-bottom: 5px;
+    margin-right: 0px;
+}
+.layui-search-form .layui-form-item {
+    margin-bottom: 0px;
+    clear: both;
+}
+.layui-search-form{
+	margin-top: 8px;
+}
+.tableCellPre{
+	margin-right: 10px;
+}
+.layerForm{
+	width: 95%;
+    margin-top: 15px;
+}
+
+/*************** label宽度  *****************/
+.myLabelWidth30 .layui-form-label{
+	width: 30px;
+}
+.myLabelWidth35 .layui-form-label{
+	width: 35px;
+}
+.myLabelWidth40 .layui-form-label{
+	width: 40px;
+}
+.myLabelWidth45 .layui-form-label{
+	width: 45px;
+}
+.myLabelWidth50 .layui-form-label{
+	width: 50px;
+}
+.myLabelWidth55 .layui-form-label{
+	width: 55px;
+}
+.myLabelWidth60 .layui-form-label{
+	width: 60px;
+}
+.myLabelWidth65 .layui-form-label{
+	width: 65px;
+}
+.myLabelWidth70 .layui-form-label{
+	width: 70px;
+}
+.myLabelWidth75 .layui-form-label{
+	width: 75px;
+}
+.myLabelWidth80 .layui-form-label{
+	width: 80px;
+}
+.myLabelWidth85 .layui-form-label{
+	width: 85px;
+}
+.myLabelWidth90 .layui-form-label{
+	width: 90px;
+}
+.myLabelWidth95 .layui-form-label{
+	width: 95px;
+}
+.myLabelWidth100 .layui-form-label{
+	width: 100px;
+}
+.myLabelWidth105 .layui-form-label{
+	width: 105px;
+}
+.myLabelWidth110 .layui-form-label{
+	width: 110px;
+}
+.myLabelWidth115 .layui-form-label{
+	width: 115px;
+}
+.myLabelWidth120 .layui-form-label{
+	width: 120px;
+}
+.myLabelWidth125 .layui-form-label{
+	width: 125px;
+}
+.myLabelWidth130 .layui-form-label{
+	width: 130px;
+}
+.myLabelWidth135 .layui-form-label{
+	width: 135px;
+}
+.myLabelWidth140 .layui-form-label{
+	width: 140px;
+}
+.myLabelWidth145 .layui-form-label{
+	width: 145px;
+}
+.myLabelWidth150 .layui-form-label{
+	width: 150px;
+}
+.myLabelWidth155 .layui-form-label{
+	width: 155px;
+}
+.myLabelWidth160 .layui-form-label{
+	width: 160px;
+}
+.myLabelWidth165 .layui-form-label{
+	width: 165px;
+}
+.myLabelWidth170 .layui-form-label{
+	width: 170px;
+}
+.myLabelWidth175 .layui-form-label{
+	width: 175px;
+}
+.myLabelWidth180 .layui-form-label{
+	width: 180px;
+}
+.myLabelWidth185 .layui-form-label{
+	width: 185px;
+}
+.myLabelWidth190 .layui-form-label{
+	width: 190px;
+}
+.myLabelWidth195 .layui-form-label{
+	width: 195px;
+}
+.myLabelWidth200 .layui-form-label{
+	width: 200px;
+}
+.my-form-label{
+	padding:9px 15px;text-align: right;display:-moz-inline-box;display:inline-block;
+}
+.my-line-height{
+	padding: 5px 0px 5px 0px;
+}
+.myRedColor{
+	color: red;font-weight: 900;padding-left: 3px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>门型收货</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+.centerClass{
+    transform: translate(0, -50%);
+    font-size: 75px;
+    text-align: center;
+    font-weight:900;
+}
+#circle {
+    width: 50px;
+    height: 50px;
+    /* background: #66CC00;*/
+    /* background: #CCCCCC; */
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+#doorName{
+    font-size: 85px;
+    font-weight:900;
+}
+</style>
+</head>
+<body>
+
+<table>
+<tbody>
+<tr><td width="50%" id="doorName">门型1号</td><td><div id="circle"></div></td></tr>
+</tbody>
+</table>
+
+<div class="centerClass" id="noMsg">无显示信息！</div>
+
+<div class="centerClass" id="showOrder"></div>
+<div class="centerClass" id="showGroup">整托收货</div>
+
+</body>
+<script type="text/javascript">
+
+var noMsgDom = document.getElementById("noMsg");
+var circleDom = document.getElementById("circle");
+var doorNameDom = document.getElementById("doorName");
+var showOrderDom = document.getElementById("showOrder");
+var showGroupDom = document.getElementById("showGroup");
+
+//显示门型信息：门型名称、连接状态
+function showDoorInfo(doorName,connetStatus){ //connetStatus=true、false
+	doorNameDom.innerHTML = doorName;
+	if(connetStatus == true){
+		circleDom.style.background="#66CC00"; //门型连接上服务器，圆点显示绿色
+	}else{
+		circleDom.style.background="#CCCCCC"; //门型连接上服务器，圆点显示灰色
+	}
+}
+
+//显示收货返回结果
+function showResultMsg(result){
+	var greenColor = "#66CC00";
+	if(result && result.bean){
+		if(result.bean.status == 200){
+			//如果有包装流转单号
+			if(result.bean.orderCode){ 
+				showOrderDom.innerHTML = "包装流转单号："+result.bean.orderCode;
+				//如果是已全部收货
+				if(result.bean.circulateOrderStatus == "2"){
+					showOrderDom.style.color = greenColor; //已全部收货，绿色
+				}else{
+					showOrderDom.style.color = "red"; //未全部收货，红色
+				}
+				//如果是整托已全部收货
+				if(result.bean.groupStatus == "1"){
+					showGroupDom.style.color = greenColor; //已全部收货，绿色
+				}else{
+					showGroupDom.style.color = "red"; //未全部收货，红色
+				}
+				showOrderDom.style["margin-top"] = "9%";
+				showOrderDom.style.display = "block";
+
+				showGroupDom.style["margin-top"] = "2%";
+				showGroupDom.style.display = "block";
+			}else{
+				showOrder.innerHTML = "新包装入库！";
+				showOrder.style.color = greenColor; //已全部收货，绿色
+				$(".showOrder").css({ "margin-top": "15%" }).show();
+				$(".showGroup").hide();
+			}
+			noMsgDom.style.display = "none";
+		}else{
+			noMsgDom.style.innerHTML = result.bean.msg;
+			noMsgDom.style.display = "block";
+			showOrderDom.style.display = "none";
+			showGroupDom.style.display = "none";
+		}
+	}else{
+		noMsgDom.style["margin-top"] = "15%";
+		noMsgDom.style.display = "block";
+
+		showOrderDom.style.display = "none";
+		showGroupDom.style.display = "none";
+	}
+}
+
+/***************************** 以下是测试例子代码  ***************************************************/
+
+//显示测试，门型断开连接效果
+showDoorInfo("门型2号",false);
+//显示测试，门型连接上服务器效果
+//showDoorInfo("门型3号",true);
+
+//显示测试，有数据的情况
+var result = {};
+result.bean = {};
+result.bean.orderCode = "WUHANZGS207803240009";
+result.bean.circulateOrderStatus = "2";
+showResultMsg(result);
+
+//显示测试，无数据的情况
+var rrr;
+//showResultMsg(rrr);
+</script>
+</html>
